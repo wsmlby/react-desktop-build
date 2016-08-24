@@ -1,32 +1,10 @@
 'use strict';
 
-var _typeof3 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _typeof2 = typeof Symbol === "function" && _typeof3(Symbol.iterator) === "symbol" ? function (obj) {
-  return typeof obj === "undefined" ? "undefined" : _typeof3(obj);
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof3(obj);
-};
-
-var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-  return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-};
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class, _temp;
 
@@ -50,27 +28,13 @@ var _lock = require('./lock');
 
 var _lock2 = _interopRequireDefault(_lock);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var styles = {
   controls: {
@@ -94,7 +58,14 @@ var Controls = (_temp = _class = function (_Component) {
   _createClass(Controls, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { style: styles.controls }, _react2.default.createElement(_lock2.default, { onLockClick: this.props.onLockClick, onUnlockClick: this.props.onUnlockClick, ref: 'lock' }), _react2.default.createElement(_minimize2.default, { onClick: this.props.onMinimizeClick, ref: 'minimize' }), _react2.default.createElement(_maximize2.default, { onMaximizeClick: this.props.onMaximizeClick, onRestoreDownClick: this.props.onRestoreDownClick, ref: 'maximize' }), _react2.default.createElement(_close2.default, { onClick: this.props.onCloseClick, ref: 'close' }));
+      return _react2.default.createElement(
+        'div',
+        { style: styles.controls },
+        this.props.showLock ? _react2.default.createElement(_lock2.default, { onLockClick: this.props.onLockClick, onUnlockClick: this.props.onUnlockClick, ref: 'lock' }) : null,
+        this.props.showMinimize ? _react2.default.createElement(_minimize2.default, { onClick: this.props.onMinimizeClick, ref: 'minimize' }) : null,
+        this.props.showMaximize ? _react2.default.createElement(_maximize2.default, { onMaximizeClick: this.props.onMaximizeClick, onRestoreDownClick: this.props.onRestoreDownClick, ref: 'maximize' }) : null,
+        _react2.default.createElement(_close2.default, { onClick: this.props.onCloseClick, ref: 'close' })
+      );
     }
   }]);
 
@@ -105,6 +76,13 @@ var Controls = (_temp = _class = function (_Component) {
   onRestoreDownClick: _react.PropTypes.func,
   onMaximizeClick: _react.PropTypes.func,
   onLockClick: _react.PropTypes.func,
-  onUnlockClick: _react.PropTypes.func
+  onUnlockClick: _react.PropTypes.func,
+  showMinimize: _react.PropTypes.bool,
+  showMaximize: _react.PropTypes.bool,
+  showLock: _react.PropTypes.bool
+}, _class.defaultProps = {
+  showMinimize: false,
+  showMaximize: false,
+  showLock: false
 }, _temp);
 exports.default = Controls;
