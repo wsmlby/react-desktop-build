@@ -5,7 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.paddingPropTypes = undefined;
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
 
 exports.removePaddingProps = removePaddingProps;
 exports.removeDuplicatePaddingProps = removeDuplicatePaddingProps;
@@ -24,7 +32,9 @@ var _styleHelper = require('../styleHelper');
 
 var _styleHelper2 = _interopRequireDefault(_styleHelper);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var paddingPropTypes = exports.paddingPropTypes = {
   padding: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),

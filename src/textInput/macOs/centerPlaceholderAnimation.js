@@ -10,7 +10,9 @@ var _bezierEasing = require('../../animation/bezierEasing');
 
 var _bezierEasing2 = _interopRequireDefault(_bezierEasing);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var requestAnimationFrame = void 0;
 if (typeof window !== 'undefined') {
