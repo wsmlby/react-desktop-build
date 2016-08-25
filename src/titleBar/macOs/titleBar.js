@@ -173,7 +173,12 @@ var TitleBar = (_dec = (0, _dimension2.default)({ width: '100%' }), _dec2 = (0, 
   onCloseClick: _react.PropTypes.func,
   onMinimizeClick: _react.PropTypes.func,
   onMaximizeClick: _react.PropTypes.func,
-  onResizeClick: _react.PropTypes.func
+  onResizeClick: _react.PropTypes.func,
+  onLockClick: _react.PropTypes.func,
+  onUnlockClick: _react.PropTypes.func,
+  showMinimize: _react.PropTypes.bool,
+  showResize: _react.PropTypes.bool,
+  showLock: _react.PropTypes.bool
 }), _class2.childContextTypes = {
   titlebarChild: _react.PropTypes.bool
 }, _temp2)) || _class) || _class);

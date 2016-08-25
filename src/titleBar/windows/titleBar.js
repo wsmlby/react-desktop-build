@@ -134,7 +134,12 @@ var TitleBar = (_dec = (0, _windows2.default)(function (nextProps, prevProps, ba
   onCloseClick: _react.PropTypes.func,
   onMinimizeClick: _react.PropTypes.func,
   onMaximizeClick: _react.PropTypes.func,
-  onRestoreDownClick: _react.PropTypes.func
+  onRestoreDownClick: _react.PropTypes.func,
+  onLockClick: _react.PropTypes.func,
+  onUnlockClick: _react.PropTypes.func,
+  showMinimize: _react.PropTypes.bool,
+  showMaximize: _react.PropTypes.bool,
+  showLock: _react.PropTypes.bool
 }), _class2.childContextTypes = {
   isMaximized: _react.PropTypes.bool
 }, _class2.contextTypes = _extends({}, _windows4.themeContextTypes), _temp)) || _class) || _class) || _class) || _class);
