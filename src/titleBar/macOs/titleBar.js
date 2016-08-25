@@ -117,6 +117,11 @@ var TitleBar = (_dec = (0, _dimension2.default)({ width: '100%' }), _dec2 = (0, 
       delete props.onMinimizeClick;
       delete props.onMaximizeClick;
       delete props.onResizeClick;
+      delete props.onLockClick;
+      delete props.onUnlockClick;
+      delete props.showMinimize;
+      delete props.showResize;
+      delete props.showLock;
 
       var componentStyle = _extends({}, _2.default.titleBar);
 

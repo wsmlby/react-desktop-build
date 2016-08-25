@@ -83,6 +83,11 @@ var TitleBar = (_dec = (0, _windows2.default)(function (nextProps, prevProps, ba
       delete props.onMinimizeClick;
       delete props.onMaximizeClick;
       delete props.onRestoreDownClick;
+      delete props.onLockClick;
+      delete props.onUnlockClick;
+      delete props.showMinimize;
+      delete props.showMaximize;
+      delete props.showLock;
 
       var componentStyle = _extends({}, _windows6.default.titleBar, style);
       var titleStyle = _windows6.default.title;
